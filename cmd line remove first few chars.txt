@@ -1,0 +1,4 @@
+ get-childitem * | rename-item -newname { [string]($_.name).substring(21)}
+ get-childitem * | rename-item -newname{"TOAPPEND" + [string]($_.name)}
+
+i guess for the first one i was adding [string] to the front???? and then removing 21 characters??? 
